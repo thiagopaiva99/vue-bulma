@@ -2,7 +2,7 @@ Vue.component('message', {
     template: `
         <article class="message" v-show="visible">
             <div class="message-header">
-                <p>Hello World</p>
+                <p>{{ title }}</p>
                 <button class="delete" @click="hiddeMessage"></button>
             </div>
             <div class="message-body">
@@ -15,6 +15,9 @@ Vue.component('message', {
             visible: true
         }
     },
+    props: [
+        'title'
+    ],
     methods: {
         hiddeMessage: function() {
             this.visible = !this.visible
