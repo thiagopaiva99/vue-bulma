@@ -6,7 +6,7 @@ Vue.component('message', {
                 <button class="delete" @click="hiddeMessage"></button>
             </div>
             <div class="message-body">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nam unde, quae nihil sequi dolor explicabo aspernatur magnam vel veniam omnis ut atque doloribus ipsa est ipsam modi aliquam a.
+                {{ body }}
             </div>
         </article>
     `,
@@ -16,7 +16,8 @@ Vue.component('message', {
         }
     },
     props: [
-        'title'
+        'title',
+        'body'
     ],
     methods: {
         hiddeMessage: function() {
