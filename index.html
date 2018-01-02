@@ -10,7 +10,8 @@
     </head>
     <body>
         <div id="app" class="container">
-            <button class="button is-primary">Mostrar Modal</button>
+            <button class="button is-primary" @click="showModal = !showModal">Mostrar Modal</button>
+            <modal v-show="showModal" @openModal="showModal = false"></modal>
         </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.0/vue.js"></script>
